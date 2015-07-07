@@ -1,3 +1,12 @@
+## ignore PDF output file
+## rename to upload
+fosa.pdf
+
+build/
+
+
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

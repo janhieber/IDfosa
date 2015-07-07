@@ -1,0 +1,43 @@
+\subsection*{Binärlogarithmus}
+$\displaystyle \log_2{x} = \frac{\log{x}}{\log{2}}$
+
+\subsection*{Entscheidungsgehalt}
+$\displaystyle H_0 = \log_2{K} \mbox{ mit } K = \text{Anzahl Symbole}$
+
+\subsection*{Informationsgehalt}
+\begin{minipage}{\columnwidth}
+$\displaystyle I(a_k) = -\log_2{P(a_k)} \mbox{  [bit]}$
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt}
+	\item Je kleiner $P(a_k)$, desto größer $I$.
+	\item Wenn $P(a_k) = 1$, dann $I(a_k) = 0$.
+\end{itemize}
+\end{minipage}
+
+\subsection*{Entropie - mittlerer Info.gehalt}
+\begin{minipage}{\columnwidth}
+$\displaystyle H = - \sum_{k=1}^{K} \bigg[ P(a_k) \cdot \log_2{P(a_k)} \bigg] \mbox{  [bit]}$
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item Wenn alle Sym. gleich Wahrscheinlich $I(a_k) = H_0 = H$
+	\item Max bei $P(a_k) = \frac{1}{K}$
+\end{itemize}
+\end{minipage}
+
+\subsection*{Redundanz}
+\begin{minipage}{\columnwidth}
+$\displaystyle R = H_0 - H \mbox{  [bit]}$
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item relative Red. $\displaystyle R = \frac{H_0 - H}{H}$
+\end{itemize}
+\end{minipage}
+
+\subsection*{Ideale Codewortlänge}
+$\displaystyle n = -\log_2{P(a_k)} \mbox{  [bit]}$
+
+\subsection*{Mittlere Codewortlänge}
+$\displaystyle \overline{m} = \sum_{k=1}^{K} \bigg[ P(a_k) \cdot m_k \bigg] \mbox{  [bit]}$
