@@ -1,5 +1,27 @@
 \begin{multicols}{2}
 
-
+\subsection*{Transformationen}
+\begin{minipage}{\columnwidth}
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt}
+	\item WHT - Walsh-Hadamard\\
+			Einfach; Rechteck-Funktion mit -1 und 1.
+	\item DFT - Diskrete-Fourier
+	\item DCT - Diskrete-Cosinus\\
+			Guter Kompromiss; 
+	\item KLT - Karhunen-Loeve\\
+			individuelle Basisfunktionen.
+\end{itemize}
+\end{minipage}
 
 \end{multicols}
+
+\subsection*{DCT - Hin}
+$\displaystyle F(u) = \frac{C(u)}{\sqrt{N}}
+	\cdot \sum_{x=0}^{N-1} \bigg[ f(x)
+	\cdot \cos{\frac{(2x+1) \cdot u \cdot \pi{}}{2N}}
+	\bigg] \mbox{  für } u=0,1,...,N-1 $
+	
+$\displaystyle C(u) = \begin{cases}1&\text{für }
+	u=0\\\sqrt{2}&\text{sonst}\end{cases} $
