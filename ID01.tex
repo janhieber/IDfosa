@@ -1,15 +1,20 @@
 \begin{multicols}{2}
 
 \subsection*{Binärlogarithmus}
-$\displaystyle \log_2{x} = \frac{\log{x}}{\log{2}}$
+\[
+    \log_2{x} = \frac{\log{x}}{\log{2}}
+\]
 
 \subsection*{Entscheidungsgehalt}
-$\displaystyle H_0 = \log_2{K} 
-	\mbox{ mit } K = \text{Anzahl Symbole}$
+\[
+    H_0 = \log_2{K} \mbox{ mit } K = \text{Anzahl Symbole}
+\]
 
 \subsection*{Informationsgehalt}
 \begin{minipage}{\columnwidth}
-$\displaystyle I(a_k) = -\log_2{P(a_k)} \mbox{  [bit]}$
+\[
+    I(a_k) = -\log_2{P(a_k)} \mbox{ [Bit]}
+\]
 \begin{itemize}
 	\setlength{\parskip}{0pt}
 	\setlength{\itemsep}{0pt}
@@ -20,20 +25,27 @@ $\displaystyle I(a_k) = -\log_2{P(a_k)} \mbox{  [bit]}$
 
 \subsection*{Entropie -- mittlerer Info.gehalt}
 \begin{minipage}{\columnwidth}
-$\displaystyle H = - \sum_{k=1}^{K} 
-	\bigg[ P(a_k) \cdot \log_2{P(a_k)} \bigg] 
-	\mbox{  [bit]}$
+\[
+    H = - \sum_{k=1}^{K} \bigg[ P(a_k) \cdot \log_2{P(a_k)} \bigg] \mbox{ [Bit]}
+\]
 \begin{itemize}
 	\setlength{\parskip}{0pt}
 	\setlength{\itemsep}{0pt plus 1pt}
 	\item Wenn alle Sym.\ gleich wahrscheinlich $I(a_k) = H_0 = H$
 	\item Max.\ bei $P(a_k) = \frac{1}{K}$
+    \item Einfachere Berechnung bei $P(a_k) = \frac{i_k}{c}$:
 \end{itemize}
+\[
+    H = \frac{c \cdot \log(c) - \sum\limits_{k=1}^{K} \bigg[ i_k \cdot
+        \log(i_k) \bigg]}{c \cdot \log(2)} \mbox{ [Bit]}
+\]
 \end{minipage}
 
 \subsection*{Redundanz}
 \begin{minipage}{\columnwidth}
-$\displaystyle R = H_0 - H \mbox{  [bit]}$
+\[
+    R = H_0 - H \mbox{ [Bit]}
+\]
 \begin{itemize}
 	\setlength{\parskip}{0pt}
 	\setlength{\itemsep}{0pt plus 1pt}
@@ -42,11 +54,15 @@ $\displaystyle R = H_0 - H \mbox{  [bit]}$
 \end{minipage}
 
 \subsection*{Ideale Codewortlänge}
-$\displaystyle n = -\log_2{P(a_k)} \mbox{  [bit]}$
+\[
+    n = -\log_2{P(a_k)} \mbox{ [Bit]}
+\]
 
 \subsection*{Mittlere Codewortlänge}
-$\displaystyle \overline{m} = 
-	\sum_{k=1}^{K} \bigg[ P(a_k) 
-	\cdot m_k \bigg] \mbox{  [bit]}$
+\[
+    \overline{m} = 
+        \sum_{k=1}^{K} \bigg[ P(a_k) 
+        \cdot m_k \bigg] \mbox{ [Bit]}
+\]
 
 \end{multicols}
