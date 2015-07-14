@@ -2,17 +2,19 @@
 
 \subsection*{Transformationen}
 \begin{minipage}{\columnwidth}
-\begin{itemize}
+\begin{description}
 	\setlength{\parskip}{0pt}
 	\setlength{\itemsep}{0pt}
-	\item WHT - Walsh-Hadamard\\
-			Einfach; Rechteck-Funktion mit -1 und 1.
-	\item DFT - Diskrete-Fourier
-	\item DCT - Diskrete-Cosinus\\
-			Guter Kompromiss; 
-	\item KLT - Karhunen-Loeve\\
-			individuelle Basisfunktionen.
-\end{itemize}
+    \item[WHT -- Walsh-Hadamard]\ \\
+        Einfach; Rechteck-Funktion mit -1 und 1.
+    \item[DFT -- Diskrete-Fourier]\ \\
+        Sinus- und Cosinus-Funktionen als Basis
+    \item[DCT -- Diskrete-Cosinus]\ \\
+        Cosinus-Funktionen als Basis \\
+        Guter Kompromiss aus Aufwand und Nutzen
+    \item[KLT -- Karhunen-Loeve]\ \\
+        individuelle Basisfunktionen, hoher Rechenaufwand
+\end{description}
 \end{minipage}
 
 \subsection*{Präcodierungen}
