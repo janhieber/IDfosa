@@ -1,0 +1,60 @@
+
+
+\subsection*{Datenkompression Optimierung}
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item Bestimmte Mindestkompression (Kanälen mit begrenzter Datenrate)
+	\item Echtzeit (z.B.\ bei Videokonferenz-Systemen oder digitalen Videorecordern)
+	\item Bei verlustbehafteter DK bestimmte Mindestqualität nicht unterschreiten
+	\item Maximale Decodierungszeit darf nicht überschritten werden (Videokonferenzsystemen, Bildtelefonen)
+\end{itemize}
+
+\subsection*{Quantisierung Optimierung}
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item Minimierung der Quantisiererfehlerleistung (objektives Maß)
+	\item Minimierung der subjektiven Wahrnehmbarkeit von Fehlern Bildtelefonen)
+\end{itemize}
+
+
+
+
+
+
+\begin{multicols}{2}
+\subsection*{wahrnehmungsbasierte Codierung}
+Perception-based coding
+
+\subsection*{Vektor-Quantisierung}
+Aufwand beim Encoder ist deutlich größer als beim Decoder. Gut für Broadcast.
+
+\subsection*{Huffman}
+Dekrementieren und mit Einsen auffüllen\\
+11 101 100 011 010 0011 0010 0001 0000
+
+\subsection*{Kommazahl zu Binär}
+\begin{minipage}{\columnwidth}
+In TR mit 2 multiplizieren\\
+wenn vor Komma ungerade: 0\\
+wenn gerade: 1
+\end{minipage}
+
+\subsection*{LZ Algorithmen}
+\begin{minipage}{\columnwidth}
+\subsubsection*{LZ78}
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item Wörterbuch zu Beginn leer
+\end{itemize}
+\subsubsection*{LZW}
+\begin{itemize}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 1pt}
+	\item Wörterbuch zu Beginn gefüllt
+\end{itemize}
+\end{minipage}
+
+\end{multicols}
