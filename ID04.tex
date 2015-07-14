@@ -6,22 +6,48 @@
 	\setlength{\parskip}{0pt}
 	\setlength{\itemsep}{0pt}
     \item[WHT -- Walsh-Hadamard]\ \\
-			Einfach; Rechteck-Funktion mit -1 und 1.
+        Einfach; Rechteck-Funktion mit -1 und 1.
     \item[DFT -- Diskrete-Fourier]\ \\
+        Sinus- und Cosinus-Funktionen als Basis
     \item[DCT -- Diskrete-Cosinus]\ \\
-			Guter Kompromiss aus Aufwand und Kompression; 
+        Cosinus-Funktionen als Basis \\
+        Guter Kompromiss aus Aufwand und Nutzen
     \item[KLT -- Karhunen-Loeve]\ \\
-			individuelle Basisfunktionen.
+        individuelle Basisfunktionen, hoher Rechenaufwand
 \end{description}
 \end{minipage}
 
 \end{multicols}
 
-\subsection*{DCT-Hintransformation}
-$\displaystyle F(u) = \frac{C(u)}{\sqrt{N}}
+\subsection*{1D-DCT-Hintransformation}
+\[
+    F(u) = \frac{C(u)}{\sqrt{N}}
 	\cdot \sum_{x=0}^{N-1} \bigg[ f(x)
 	\cdot \cos{\frac{(2x+1) \cdot u \cdot \pi{}}{2N}}
-	\bigg] \mbox{  für } u=0,1,\ldots,N-1 $
+	\bigg] \quad \mbox{ für } u=0,1,\ldots,N-1
+\]
 	
-$\displaystyle C(u) = \begin{cases}1&\text{für }
-	u=0\\\sqrt{2}&\text{sonst}\end{cases} $
+\[
+    C(u) = \begin{cases}1&\text{für }
+	u=0\\\sqrt{2}&\text{sonst}\end{cases}
+\]
+
+\subsection*{1D-DCT-Rücktransformation}
+\[
+    f(x) = \sum_{u=0}^{N-1} \bigg[ \frac{C(u)}{\sqrt{N}}
+	\cdot F(u)
+	\cdot \cos{\frac{(2x+1) \cdot u \cdot \pi{}}{2N}}
+	\bigg] \quad \mbox{ für } x=0,1,\ldots,N-1
+\]
+
+\subsection*{$2 \times 2$-WHT-Hintransformation}
+\[
+    F(u, v) = \frac{1}{2} \sum_{x=0}^{1} \sum_{y=0}^{1} f(x, y) \cdot {(-1)}^{x \cdot u + y \cdot v}
+        \quad \mbox{ für } u = 0, 1 \mbox{ und } v = 0, 1
+\]
+
+\subsection*{$2 \times 2$-WHT-Rücktransformation}
+\[
+    f(x, y) = \frac{1}{2} \sum_{u=0}^{1} \sum_{v=0}^{1} F(u, v) \cdot {(-1)}^{x \cdot u + y \cdot v}
+        \quad \mbox{ für } x = 0, 1 \mbox{ und } y = 0, 1
+\]
