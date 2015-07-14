@@ -5,10 +5,17 @@
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
-\usepackage{amsmath}
+% option fleqn to align equations to the left
+\usepackage[fleqn]{amsmath}
 \usepackage[raggedright]{titlesec}
 
 \setlength\columnsep{10mm}
+% remove indent from equations
+\setlength\mathindent{0mm}
+% remove paragraph indendations
+\setlength\parindent{0pt}
+% remove margins from equations
+\abovedisplayskip=0pt
 \titleformat{\subsection}{\titlerule\vspace{1ex}\normalfont\Large\bfseries}{\thesubsection}{1em}{}
 
 \begin{document}
