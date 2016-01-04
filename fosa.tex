@@ -1,9 +1,19 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{geometry}
-    \geometry{a4paper, top=20mm, left=10mm, right=10mm, bottom=20mm}
-\usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
+\geometry{a4paper, top=20mm, left=10mm, right=10mm, bottom=20mm}
+
+\usepackage{ifxetex}
+
+\ifxetex
+    \usepackage{fontspec}
+    \usepackage{polyglossia}
+    \setmainlanguage{ngerman}
+\else
+    \usepackage[utf8]{inputenc}    
+    \usepackage[ngerman]{babel}
+    \usepackage[T1]{fontenc}
+\fi
+
 \usepackage{graphicx}
 \usepackage{multicol}
 % option fleqn to align equations to the left
